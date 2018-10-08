@@ -20,7 +20,7 @@ $('body').ready(function(){
 /* navbar updater auto */
 $(window).scroll(function(){
     var i = document.getElementsByClassName('nav-item');
-    var x = Math.round((window.pageYOffset/window.innerHeight));
+    var x = Math.round((window.pageYOffset/window.innerHeight/1.5));
     
     reset();
     $(i[x]).toggleClass('active');
