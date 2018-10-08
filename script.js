@@ -13,7 +13,6 @@ $('body').ready(function(){
         }else{
             $('html, body').animate({scrollTop: $('html').offset().top}, 500);
         }
-
     });
 });
 
@@ -24,4 +23,10 @@ $(window).scroll(function(){
     
     reset();
     $(i[x]).toggleClass('active');
+
+    if(window.pageYOffset > 100){
+        $('.topnav').css('background-color', 'rgba(30,30,30,0.95)');
+    }else{
+        $('.topnav').css('background-color', '');
+    }
 });

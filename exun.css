@@ -53,6 +53,7 @@ a[name]{
     flex-direction: row;
     justify-content: left;
     align-items: center;
+    transition: all 0.2s;
     z-index: 1;
 }
 
