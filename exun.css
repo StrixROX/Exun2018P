@@ -17,7 +17,7 @@ a{
     color: inherit;
     cursor: pointer;
 }
-a[name]{
+a.marker{
     display: block;
     cursor: default;
 }
@@ -145,7 +145,7 @@ a[name]{
         position: relative;
         top: 40%;
         transform: translateY(-50%);
-        height: 60vmin;
+        height: 55vmin;
         width: 100%;
         background-image: url('logo.png');
         background-size: contain;
@@ -175,11 +175,11 @@ a[name]{
 [class*='section']{
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     padding: 0 8%;
     text-align: justify;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -196,15 +196,23 @@ a[name]{
     .landing h2{
         font-size: 1em;
     }
-    a[name]{
+    a.marker:nth-child(3){
+        padding: 0;
+    }
+    a.marker{
         padding: 23vh 0;
     }
 
     .topnav a{
-        width: 25%;
-        padding: auto;
+        width: 30%;
     }
     
+}
+@media screen and (max-width: 480px){
+    .logo{
+        height: 80vmin;
+    }
+
 }
 @media screen and (min-width: 600px){
     .topnav a:hover{

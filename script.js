@@ -1,3 +1,4 @@
+/* make all the nav-items inactive */
 function reset(){
     $('.topnav a').removeClass('active');
 }
@@ -9,20 +10,29 @@ $('body').ready(function(){
         $(this).toggleClass('active');
         if(this.hash.slice(1) != ''){
             var name = '[name=' + this.hash.slice(1) + ']';
-            $('html, body').animate({scrollTop: $(name).offset().top}, 500);
-        }else{
-            $('html, body').animate({scrollTop: $('html').offset().top}, 500);
+            $('html, body').animate({scrollTop: $(name).offset().top}, 400);
         }
     });
 });
 
+
+
 /* navbar updater auto */
+
+/* get an array of offsets of sections */
+var markers = document.getElementsByClassName('marker');
+
+
 $(window).scroll(function(){
-    var i = document.getElementsByClassName('nav-item');
-    var x = Math.round((window.pageYOffset/window.innerHeight/1.5));
-    
-    reset();
-    $(i[x]).toggleClass('active');
+
+    /* nav-item select on scroll-into-view */
+    var item = document.getElementsByClassName('nav-item');
+    for(var i = 0; i < markers.length; i++){
+        if(window.pageYOffset >= $(markers[i]).offset().top - 100){
+            reset();
+            $(item[i]).addClass('active');
+        }
+    }
 
     /* background */
     if(window.pageYOffset > 100){
@@ -30,8 +40,5 @@ $(window).scroll(function(){
     }else{
         $('.topnav').css('background-color', '');
     }
-});
 
-$('video')[0].load(function(){
-    console.log('Video loaded');
 });
