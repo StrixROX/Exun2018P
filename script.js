@@ -8,7 +8,7 @@ $('body').ready(function(){
         reset();
         $(this).toggleClass('active');
         if(this.hash.slice(1) != ''){
-            name = '[name=' + this.hash.slice(1) + ']'
+            var name = '[name=' + this.hash.slice(1) + ']';
             $('html, body').animate({scrollTop: $(name).offset().top}, 500);
         }else{
             $('html, body').animate({scrollTop: $('html').offset().top}, 500);
@@ -24,9 +24,14 @@ $(window).scroll(function(){
     reset();
     $(i[x]).toggleClass('active');
 
+    /* background */
     if(window.pageYOffset > 100){
-        $('.topnav').css('background-color', 'rgba(30,30,30,0.95)');
+        $('.topnav').css('background-color', 'rgb(30,30,30)');
     }else{
         $('.topnav').css('background-color', '');
     }
+});
+
+$('video')[0].load(function(){
+    console.log('Video loaded');
 });
