@@ -17,14 +17,12 @@ $('body').ready(function(){
 
 
 
-/* navbar updater auto */
+/* navbar update auto */
 
 /* get an array of offsets of sections */
 var markers = document.getElementsByClassName('marker');
 
-
-$(window).scroll(function(){
-
+function updateNavbarAuto(){
     /* nav-item select on scroll-into-view */
     var item = document.getElementsByClassName('nav-item');
     for(var i = 0; i < markers.length; i++){
@@ -40,5 +38,11 @@ $(window).scroll(function(){
     }else{
         $('.topnav').css('background-color', '');
     }
+}
 
+$(window).scroll(function(){
+    updateNavbarAuto();
+});
+$('body').ready(function(){
+    updateNavbarAuto();
 });
