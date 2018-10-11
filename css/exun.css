@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: wizard;
-    src: url("font.ttf");
+    src: url("../resources/font.ttf");
 }
 body {
     margin: 0;
@@ -147,7 +147,7 @@ a.marker{
         transform: translateY(-50%);
         height: 55vmin;
         width: 100%;
-        background-image: url('logo.png');
+        background-image: url('../resources/logo.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
