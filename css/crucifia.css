@@ -45,6 +45,7 @@
     transition: visibility 0s, opacity 0.2s, all 0.2s;
     visibility: hidden;
     opacity: 0;
+    z-index: 1;
 }
 .info:after{
     content: '';

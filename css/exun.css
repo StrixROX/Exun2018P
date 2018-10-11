@@ -54,7 +54,7 @@ a.marker{
     align-items: center;
     transition: all 0.2s;
     overflow: scroll;
-    z-index: 1;
+    z-index: 2;
 }
 
     .topnav a{
@@ -197,7 +197,7 @@ a.marker{
     .landing h2{
         font-size: 1em;
     }
-    a.marker:nth-child(3){
+    a.marker:nth-child(3), a.marker:nth-child(5), a.marker:nth-child(6){
         padding: 0;
     }
     a.marker{
