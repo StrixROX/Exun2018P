@@ -1,0 +1,46 @@
+.battle-section{
+    height: auto;
+}
+
+.gear-holder{
+    display: flex;
+    width: 100%;
+    margin-top: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gear{
+    height: 30vmin;
+    margin: 50px 0;
+}
+.gear.small{
+    height: 17vmin;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.sub-container{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sub-container h1{
+    text-align: left;
+    font-size: 1.5em;
+}
+
+li + li{
+    margin-top: 20px;
+}

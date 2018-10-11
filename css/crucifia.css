@@ -14,7 +14,7 @@
     position: absolute;
     width: 5vmin;
     height: 5vmin;
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 100%;
 }
 
@@ -22,6 +22,9 @@
 .b{top: 22.5%; left: 52.5%}
 .c{top: 50%; left: 50%}
 .d{top: 60%; left: 30%}
+.e{top: 70%; left: 50%}
+.f{top: 30%; left: 20%}
+.g{top: 70%; left: 60%}
 
 .hover-obj:hover .info{
     transform: translate(-50%, 0);
@@ -35,13 +38,14 @@
     left: 50%;
     transform: translate(-50%, -10px);
     width: 40vmin;
-    height: 50vmin;
     max-width: 300px;
-    max-height: 100px;
+    min-height: 100px;
+    padding: 28px;
     text-align: justify;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(30,30,30);
+    background-color: rgb(49,49,49);
     transition: visibility 0s, opacity 0.2s, all 0.2s;
     visibility: hidden;
     opacity: 0;
@@ -61,7 +65,7 @@
 }
 .info.down:after{
     top: -20px;
-    border-bottom-color: rgb(30,30,30); 
+    border-bottom-color: rgb(49,49,49); 
 }
 
 .info.up{
@@ -69,5 +73,5 @@
 }
 .info.up:after{
     bottom: -20px;
-    border-top-color: rgb(30,30,30);
+    border-top-color: rgb(49,49,49);
 }
