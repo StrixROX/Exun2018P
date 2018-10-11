@@ -1,0 +1,72 @@
+.hover-objs{
+    display: block;
+    position: relative;
+    width: 80vmin;
+    height: calc(80vmin *576 /1024); /* dimensions of the image basically*/
+}
+
+.wand-image{
+    width: 100%;
+}
+
+.hover-obj{
+    display: block;
+    position: absolute;
+    width: 5vmin;
+    height: 5vmin;
+    border: 2px solid black;
+    border-radius: 100%;
+}
+
+.a{top: 10%; left: 6%}
+.b{top: 22.5%; left: 52.5%}
+.c{top: 50%; left: 50%}
+.d{top: 60%; left: 30%}
+
+.hover-obj:hover .info{
+    transform: translate(-50%, 0);
+    visibility: visible;
+    opacity: 1;
+}
+
+.info{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -10px);
+    width: 40vmin;
+    height: 50vmin;
+    max-width: 300px;
+    max-height: 100px;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(30,30,30);
+    transition: visibility 0s, opacity 0.2s, all 0.2s;
+    visibility: hidden;
+    opacity: 0;
+}
+.info:after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 10px solid transparent;
+}
+
+.info.down{
+    top: calc(5vmin + 10px);
+}
+.info.down:after{
+    top: -20px;
+    border-bottom-color: rgb(30,30,30); 
+}
+
+.info.up{
+    bottom: calc(5vmin + 10px);
+}
+.info.up:after{
+    bottom: -20px;
+    border-top-color: rgb(30,30,30);
+}
