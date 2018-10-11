@@ -33,7 +33,7 @@ function updateNavbarAuto(){
     }
 
     /* background */
-    if(window.pageYOffset > 100){
+    if(window.pageYOffset > 10){
         $('.topnav').css('background-color', 'rgb(30,30,30)');
     }else{
         $('.topnav').css('background-color', '');
